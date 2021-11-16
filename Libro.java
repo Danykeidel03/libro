@@ -11,53 +11,83 @@
 public class Libro {
 
     private String autor;
+    private String referencia;
     private String titulo;
     private int paginas;
 
     /**
      * Fija el autor y el titulo del libro a los dados como parametro
      */
-    public Libro(String autorLibro, String tituloLibro, int numeroPaginas)
+    public Libro(String autorLibro, String tituloLibro, int numeroPaginas, String numReferencia)
     {
         autor = autorLibro;
         titulo = tituloLibro;
         paginas = numeroPaginas;
+        referencia = numReferencia;
     }
-    
-     /**
+
+    /**
      * Devuelveautor del libro
      */
     public String imprimeAutor() {
         return autor;
     }
-    
-     /**
+
+    /**
+     * Devuele el numero de referencia
+     */
+    public String getReferencia() {
+        return referencia;
+    }
+
+    /**
+     * Cambio de precio
+     */
+    public void setNumeroReferencia(String newReferencia) {
+        if (referencia.length() > 3 ) {
+            referencia = newReferencia;
+        } 
+        else {
+            System.out.println("Se produjo un error");
+        }
+    }
+
+    /**
      * Devuelve el titulo del libro
      */
     public String imprimeTitulo() {
         return titulo;
     }
-    
-     /**
+
+    /**
      * Devuelve el numero de paginas
      */
     public int numeroPaginas() {
         return paginas;
     }
-    
-     /**
+
+    /**
      * Devuelve los detalles
      */
     public void imprimirDetalles() {
         System.out.println("Titulo:" + titulo );
         System.out.println("Autor:" + autor);
         System.out.println("Paginas:" + paginas); 
+        if (referencia == referencia) {
+            System.out.println("Numero de referencia:" + referencia);
+        }
+        else {
+            System.out.println("ZZZ");
+        }
     }
-    
-     /**
+
+    /**
      * Devuelve los detalles
      */
     public String getDetalles() {
-        return ("Titulo:" + titulo ) + " " + ("Autor:" + autor) + " " + ("Paginas:" + paginas);
+        if (referencia != referencia) {
+            return ("Titulo:" + titulo ) + " " + ("Autor:" + autor) + " " + ("Paginas:" + paginas) + "" + ("ZZZ");
+        }
+        return ("Titulo:" + titulo ) + " " + ("Autor:" + autor) + " " + ("Paginas:" + paginas) + "" + ("Numero de referencia:" + referencia);
     }
 }
