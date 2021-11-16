@@ -42,14 +42,14 @@ public class Libro {
     public String getReferencia() {
         return referencia;
     }
-    
+
     /**
      * Devuele el numero de referencia
      */
     public boolean getEsLibroTexto() {
         return texto;
     }
-    
+
     /**
      * Cambio de precio
      */
@@ -104,18 +104,19 @@ public class Libro {
         else {
             System.out.println("No es un libro de texto");
         }
-        
+
     }
 
     /**
      * Devuelve los detalles
      */
     public String getDetalles() {
+        String nombreDevolver= ("Titulo:" + titulo ) + ("Autor:" + autor) + ("Paginas:" + paginas);
         if (referencia == "") {
-            return ("Titulo:" + titulo ) + " " + ("Autor:" + autor) + " " + ("Paginas:" + paginas) + " " + ("ZZZ") + " " +  ("Prestado" + prestado + "veces");
+            nombreDevolver = ("Titulo:" + titulo ) + " " + ("Autor:" + autor) + " " + ("Paginas:" + paginas) + " " + ("ZZZ") + " " +  ("Prestado" + prestado + "veces");
         }
         if (texto != true) {
-            return ("Titulo:" + titulo ) + " " + ("Autor:" + autor) + " " + ("Paginas:" + paginas) + " " + ("ZZZ") + " " +  ("Prestado" + prestado + "veces") + " " + ("No es un libro de texto");
+            nombreDevolver = ("Titulo:" + titulo ) + " " + ("Autor:" + autor) + " " + ("Paginas:" + paginas) + " " + ("ZZZ") + " " +  ("Prestado" + prestado + "veces") + " " + ("No es un libro de texto");
         }
         return ("Titulo:" + titulo ) + " " + ("Autor:" + autor) + " " + ("Paginas:" + paginas) + "" + ("Numero de referencia:" + referencia) + " " +  ("Prestado" + prestado + "veces" + " " + ("No es un libro de texto"));
     }
