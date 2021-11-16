@@ -44,4 +44,20 @@ public class Libro {
     public int numeroPaginas() {
         return paginas;
     }
+    
+     /**
+     * Devuelve los detalles
+     */
+    public void imprimirDetalles() {
+        System.out.println("Titulo:" + titulo );
+        System.out.println("Autor:" + autor);
+        System.out.println("Paginas:" + paginas); 
+    }
+    
+     /**
+     * Devuelve los detalles
+     */
+    public String getDetalles() {
+        return autor + "" + titulo + "" + paginas;
+    }
 }
