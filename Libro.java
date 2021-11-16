@@ -14,18 +14,19 @@ public class Libro {
     private String referencia;
     private String titulo;
     private int paginas;
-     private int prestado;
-
+    private int prestado;
+    private boolean texto;
     /**
      * Fija el autor y el titulo del libro a los dados como parametro
      */
-    public Libro(String autorLibro, String tituloLibro, int numeroPaginas)
+    public Libro(String autorLibro, String tituloLibro, int numeroPaginas, boolean libroTexto )
     {
         autor = autorLibro;
         titulo = tituloLibro;
         paginas = numeroPaginas;
         referencia = "";
         prestado = 0;
+        texto = libroTexto;
     }
 
     /**
@@ -41,7 +42,14 @@ public class Libro {
     public String getReferencia() {
         return referencia;
     }
-
+    
+    /**
+     * Devuele el numero de referencia
+     */
+    public boolean getEsLibroTexto() {
+        return texto;
+    }
+    
     /**
      * Cambio de precio
      */
@@ -59,9 +67,9 @@ public class Libro {
     }
 
     public void prestar() {
-      prestado = prestado + 1;
+        prestado = prestado + 1;
     }
-    
+
     /**
      * Devuelve el titulo del libro
      */
@@ -90,6 +98,13 @@ public class Libro {
             System.out.println("Numero de referencia:" + referencia);
         }
         System.out.println("Prestado" + prestado + "veces"); 
+        if (texto == true) {
+            System.out.println("Es un libro de texto");
+        }
+        else {
+            System.out.println("No es un libro de texto");
+        }
+        
     }
 
     /**
@@ -99,6 +114,9 @@ public class Libro {
         if (referencia == "") {
             return ("Titulo:" + titulo ) + " " + ("Autor:" + autor) + " " + ("Paginas:" + paginas) + " " + ("ZZZ") + " " +  ("Prestado" + prestado + "veces");
         }
-        return ("Titulo:" + titulo ) + " " + ("Autor:" + autor) + " " + ("Paginas:" + paginas) + "" + ("Numero de referencia:" + referencia) + " " +  ("Prestado" + prestado + "veces");
+        if (texto != true) {
+            return ("Titulo:" + titulo ) + " " + ("Autor:" + autor) + " " + ("Paginas:" + paginas) + " " + ("ZZZ") + " " +  ("Prestado" + prestado + "veces") + " " + ("No es un libro de texto");
+        }
+        return ("Titulo:" + titulo ) + " " + ("Autor:" + autor) + " " + ("Paginas:" + paginas) + "" + ("Numero de referencia:" + referencia) + " " +  ("Prestado" + prestado + "veces" + " " + ("No es un libro de texto"));
     }
 }
