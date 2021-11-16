@@ -18,12 +18,12 @@ public class Libro {
     /**
      * Fija el autor y el titulo del libro a los dados como parametro
      */
-    public Libro(String autorLibro, String tituloLibro, int numeroPaginas, String numReferencia)
+    public Libro(String autorLibro, String tituloLibro, int numeroPaginas)
     {
         autor = autorLibro;
         titulo = tituloLibro;
         paginas = numeroPaginas;
-        referencia = numReferencia;
+        referencia = "";
     }
 
     /**
@@ -73,11 +73,11 @@ public class Libro {
         System.out.println("Titulo:" + titulo );
         System.out.println("Autor:" + autor);
         System.out.println("Paginas:" + paginas); 
-        if (referencia == referencia) {
-            System.out.println("Numero de referencia:" + referencia);
+        if (referencia == "") {
+            System.out.println("ZZZ");
         }
         else {
-            System.out.println("ZZZ");
+            System.out.println("Numero de referencia:" + referencia);
         }
     }
 
@@ -85,7 +85,7 @@ public class Libro {
      * Devuelve los detalles
      */
     public String getDetalles() {
-        if (referencia != referencia) {
+        if (referencia == "") {
             return ("Titulo:" + titulo ) + " " + ("Autor:" + autor) + " " + ("Paginas:" + paginas) + "" + ("ZZZ");
         }
         return ("Titulo:" + titulo ) + " " + ("Autor:" + autor) + " " + ("Paginas:" + paginas) + "" + ("Numero de referencia:" + referencia);
