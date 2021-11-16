@@ -25,14 +25,14 @@ public class Libro {
      /**
      * Devuelveautor del libro
      */
-    public String getAutor() {
+    public String imprimeAutor() {
         return autor;
     }
     
      /**
      * Devuelve el titulo del libro
      */
-    public String getTitulo() {
+    public String imprimeTitulo() {
         return titulo;
     }
 }
