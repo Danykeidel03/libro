@@ -58,6 +58,6 @@ public class Libro {
      * Devuelve los detalles
      */
     public String getDetalles() {
-        return autor + "" + titulo + "" + paginas;
+        return ("Titulo:" + titulo ) + " " + ("Autor:" + autor) + " " + ("Paginas:" + paginas);
     }
 }
