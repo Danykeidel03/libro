@@ -111,13 +111,16 @@ public class Libro {
      * Devuelve los detalles
      */
     public String getDetalles() {
-        String nombreDevolver= ("Titulo:" + titulo ) + ("Autor:" + autor) + ("Paginas:" + paginas);
+        String nombreDevolver= "";
+        nombreDevolver = nombreDevolver + ("Titulo:" + titulo );
+        nombreDevolver = nombreDevolver + ("Autor:" + autor) ;
+        nombreDevolver = nombreDevolver + ("Paginas:" + paginas) ;
         if (referencia == "") {
             nombreDevolver = ("Titulo:" + titulo ) + " " + ("Autor:" + autor) + " " + ("Paginas:" + paginas) + " " + ("ZZZ") + " " +  ("Prestado" + prestado + "veces");
         }
         if (texto != true) {
             nombreDevolver = ("Titulo:" + titulo ) + " " + ("Autor:" + autor) + " " + ("Paginas:" + paginas) + " " + ("ZZZ") + " " +  ("Prestado" + prestado + "veces") + " " + ("No es un libro de texto");
         }
-        return ("Titulo:" + titulo ) + " " + ("Autor:" + autor) + " " + ("Paginas:" + paginas) + "" + ("Numero de referencia:" + referencia) + " " +  ("Prestado" + prestado + "veces" + " " + ("No es un libro de texto"));
+        return nombreDevolver;
     }
 }
