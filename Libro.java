@@ -116,10 +116,10 @@ public class Libro {
         nombreDevolver = nombreDevolver + ("Autor:" + autor) ;
         nombreDevolver = nombreDevolver + ("Paginas:" + paginas) ;
         if (referencia == "") {
-            nombreDevolver = ("Titulo:" + titulo ) + " " + ("Autor:" + autor) + " " + ("Paginas:" + paginas) + " " + ("ZZZ") + " " +  ("Prestado" + prestado + "veces");
+            nombreDevolver = nombreDevolver + ("ZZZ") + " " +  ("Prestado" + prestado + "veces");
         }
         if (texto != true) {
-            nombreDevolver = ("Titulo:" + titulo ) + " " + ("Autor:" + autor) + " " + ("Paginas:" + paginas) + " " + ("ZZZ") + " " +  ("Prestado" + prestado + "veces") + " " + ("No es un libro de texto");
+            nombreDevolver = nombreDevolver + ("No es un libro de texto");
         }
         return nombreDevolver;
     }
