@@ -118,8 +118,14 @@ public class Libro {
         if (referencia == "") {
             nombreDevolver = nombreDevolver + ("ZZZ") + " " +  ("Prestado" + prestado + "veces");
         }
+        else {
+            nombreDevolver = nombreDevolver + ("Numero de referencia:" + referencia);
+        }
         if (texto != true) {
             nombreDevolver = nombreDevolver + ("No es un libro de texto");
+        }
+        else{
+            nombreDevolver = nombreDevolver + ("Es un libro de texto");
         }
         return nombreDevolver;
     }
