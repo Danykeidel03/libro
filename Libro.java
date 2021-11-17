@@ -54,11 +54,11 @@ public class Libro {
      * Cambio de precio
      */
     public void setNumeroReferencia(String newReferencia) {
-        if (referencia.length() >= 3 ) {
-            referencia = newReferencia;
+        if (newReferencia.length() < 3 ) {
+            System.out.println("Se produjo un error");
         } 
         else {
-            System.out.println("Se produjo un error");
+            referencia = newReferencia;
         }
     }
 
